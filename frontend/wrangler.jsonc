@@ -1,0 +1,11 @@
+{
+  // Hébergement Cloudflare Workers (fichiers statiques du build Vite).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "agri-hydro",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    // Les URL de l'application React (/boutique, /produit/...) renvoient vers index.html
+    "not_found_handling": "single-page-application"
+  }
+}

@@ -1,0 +1,11 @@
+# Hébergement Apache : renvoie toutes les URL de l'application React vers index.html
+# (sinon /boutique ou /produit/... donnent une erreur 404 au rechargement).
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_URI} !^/api/
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

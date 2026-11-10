@@ -1,0 +1,24 @@
+/* Charte graphique : couleurs échantillonnées sur la carte de visite et le logo.
+   À ajuster ici uniquement si le logo original donne des valeurs exactes. */
+:root {
+  --blue: #0A78C8;        /* principal */
+  --blue-bright: #0A98E8; /* survols, dégradés */
+  --blue-deep: #0A58A8;   /* états actifs */
+  --navy: #0A2A5A;        /* textes, footer */
+  --leaf: #58A018;        /* promo, durable */
+  --forest: #0A4A2A;
+  --mist: #EEF6FC;        /* fonds de sections */
+  --ink: var(--navy);
+  --muted: #4B6384;
+  --line: #D5E4F1;
+  --wa: #25D366;
+
+  --font-head: 'Barlow Semi Condensed', 'Arial Narrow', sans-serif;
+  --font-body: 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --r-sm: 6px;
+  --r-md: 14px;
+  --r-pill: 999px;
+  --wrap: 1240px;                   /* largeur max. du contenu (marges comprises) */
+  --gutter: clamp(16px, 4vw, 32px); /* marge latérale, fluide du téléphone au grand écran */
+}

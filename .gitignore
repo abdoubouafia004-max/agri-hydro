@@ -1,0 +1,19 @@
+# Documents personnels : ne jamais publier
+_prive/
+
+# Dépendances et builds
+node_modules/
+dist/
+.wrangler/
+
+# Environnement / secrets
+.env
+.env.*
+.dev.vars*
+
+# Système / éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
