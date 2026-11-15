@@ -1,40 +1,63 @@
-# STE Agri Hydro Solution : catalogue e-commerce
+# agri-hydro
 
-État : **Étape 4** (identité visuelle, accueil, boutique, fiche produit, à propos, contact — données d'exemple).
-Backend PHP/MySQL et admin : étapes 5 et 6 (le dossier `backend/` n'existe pas encore).
+> E-commerce catalogue for **STE Agri Hydro Solution** — a water treatment company based in Oujda, Morocco.
 
-## Lancer le frontend
-```
+**Live site:** https://agri-hydro.agri-hydro-frontend.workers.dev/
+
+---
+
+## About the Project
+
+A fully responsive product catalogue built for a local business specializing in osmosis systems, water filters and pumps. Users can browse products, filter by category, view product details, and reach the company via WhatsApp.
+
+---
+
+## Features
+
+- Product catalogue with search, category filter, promotions and sort options
+- Individual product pages with descriptions and images
+- WhatsApp contact form (pre-fills a message)
+- About page and contact information
+- Deployed and live on Cloudflare Workers
+
+---
+
+## Tech Stack
+
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![Cloudflare Workers](https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat&logo=cloudflare&logoColor=white)
+
+---
+
+## Getting Started
+
+**Prerequisites:** Node.js 18+
+
+```bash
 cd frontend
 npm install
-npm run dev      # http://localhost:5173 (port fixe)
-npm run build    # génère frontend/dist
+npm run dev      # http://localhost:5173
+npm run build    # generates frontend/dist
 ```
-Prérequis : Node.js 18+.
 
-## Pages
-- `/` accueil · `/boutique` (paramètres `q`, `categorie`, `promo=1`, `tri=nouveautes|prix-asc|prix-desc`)
-- `/produit/:slug` · `/a-propos` · `/contact` (le formulaire prépare un message WhatsApp)
+---
 
-## Où modifier quoi
-- Couleurs : `frontend/src/styles/tokens.css`
-- Coordonnées, horaires, URL du site, catégories, produits d'exemple, slides : `frontend/src/data/mock.js`
-  (règles des produits en commentaire dans ce fichier : slug sans accents, prix absent = « Prix sur demande »…)
-- Message WhatsApp : `frontend/src/utils/whatsapp.js`
-- Logo : `frontend/public/brand/logo.png` (extrait d'une image, à remplacer par l'original)
+## Project Structure
 
-## Mise en ligne (Cloudflare) — production actuelle
-Site en ligne : https://agri-hydro.agri-hydro-frontend.workers.dev
 ```
-cd frontend
-npx wrangler login   # une seule fois
-npm run deploy       # build + wrangler deploy (config : frontend/wrangler.jsonc)
+agri-hydro/
+  frontend/
+    src/
+    public/
+    wrangler.jsonc   # Cloudflare deployment config
 ```
-Les URL de l'application (`/boutique`, `/produit/...`) sont renvoyées vers `index.html`
-grâce à `not_found_handling: "single-page-application"` dans `wrangler.jsonc`.
 
-## Mise en ligne (Apache)
-`frontend/public/.htaccess` est copié dans `dist/` : il renvoie les URL de l'application vers `index.html`.
-Renseigner `settings.siteUrl` dans `mock.js` pour que les liens produits envoyés sur WhatsApp pointent vers le vrai site.
+---
 
-⚠️ Tout ce qui est dans `frontend/public/` est publié tel quel : n'y placez aucun document personnel.
+## Status
+
+Stage 4 of 6 — frontend complete (UI, catalogue, product pages, contact).
+Backend (PHP/MySQL) and admin panel planned for stages 5–6.
