@@ -3,7 +3,6 @@ import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { settings, categories } from '../../data/mock.js';
 import { whatsappLink } from '../../utils/whatsapp.js';
 import LogoLoop from '../common/LogoLoop.jsx';
-import SiteCursor from '../common/SiteCursor.jsx';
 
 // Éléments du bandeau défilant (référence stable : LogoLoop se re-mesure quand `logos` change).
 const catnavItems = [
@@ -117,7 +116,6 @@ export default function Layout() {
   useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, [pathname]);
   return (
     <>
-      <SiteCursor />
       <TopBar />
       <Header />
       <main><Outlet /></main>

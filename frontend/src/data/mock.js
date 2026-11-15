@@ -18,7 +18,6 @@ export const settings = {
 
 export const categories = [
   { slug: 'osmoseurs', name: 'Osmoseurs', icon: 'fa-faucet-drip' },
-  { slug: 'filtres', name: 'Filtres et cartouches', icon: 'fa-filter' },
   { slug: 'pompes', name: 'Pompes', icon: 'fa-gauge-high' },
   { slug: 'irrigation', name: 'Irrigation', icon: 'fa-seedling' },
   { slug: 'testeurs', name: 'Testeurs', icon: 'fa-vial' },
@@ -29,9 +28,6 @@ export const heroSlides = [
   { id: 1, kind: 'ro', title: "L'eau pure, directement à votre robinet",
     points: ['Osmoseurs pour la maison et les professionnels', 'Solutions hydrauliques adaptées à votre eau', 'Conseil et accompagnement à Oujda'],
     cta: 'Voir les osmoseurs', to: '/boutique?categorie=osmoseurs' },
-  { id: 2, kind: 'cartridge', title: 'Cartouches et membranes pour un entretien sans souci',
-    points: ['Pré-filtres PP, UDF et CTO', 'Membranes d’osmose inverse', 'Packs d’entretien'],
-    cta: 'Voir les filtres', to: '/boutique?categorie=filtres' },
   { id: 3, kind: 'drip', title: 'Irrigation et pompage pour une agriculture durable',
     points: ['Goutte-à-goutte et tuyauterie', 'Pompes de surface et immergées', 'Conseil pour votre exploitation'],
     cta: "Voir l'irrigation", to: '/boutique?categorie=irrigation' },

@@ -47,10 +47,6 @@ export function PromoBanners() {
   return (
     <section className="section tight">
       <AnimatedContent className="wrap banners" distance={50} stagger={0.12}>
-        <Link to="/boutique?categorie=filtres" className="banner b-blue">
-          <div><h3>Entretenez votre osmoseur</h3><p>Cartouches, membranes et packs d'entretien.</p><span className="btn btn-light">Voir les filtres</span></div>
-          <ProductArt kind="cartridge" label="Cartouches" />
-        </Link>
         <Link to="/boutique?categorie=irrigation" className="banner b-green">
           <div><h3>Irrigation et pompage</h3><p>Du goutte-à-goutte aux pompes de surface.</p><span className="btn btn-light">Voir l'irrigation</span></div>
           <ProductArt kind="drip" label="Irrigation" />

@@ -25,7 +25,7 @@ export default function Product() {
 
   const cat = categoryBySlug(p.category);
   const off = discount(p);
-  const related = products.filter((x) => x.category === p.category && x.id !== p.id).slice(0, 4);
+  const related = products.filter((x) => x.category === p.category && x.id !== p.id);
   const clamp = (n) => Math.min(99, Math.max(1, Number.isFinite(n) ? Math.round(n) : 1));
 
   return (

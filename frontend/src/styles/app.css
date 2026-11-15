@@ -99,6 +99,7 @@ img,svg{max-width:100%;display:block}
 
 /* Bannières */
 .banners{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.banners>:only-child{grid-column:1/-1} /* une seule bannière : pleine largeur */
 .banner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:30px 32px;border-radius:var(--r-md);color:#fff;overflow:hidden}
 .banner h3{font-size:1.9rem}.banner p{margin-top:8px;opacity:.92}
 .banner .art{width:190px;flex:none}
@@ -232,12 +233,6 @@ img,svg{max-width:100%;display:block}
 .contact-form textarea{resize:vertical;min-height:120px}
 .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:0;border-color:var(--blue)}
 .contact-form .btn{justify-self:start}
-
-/* Curseur goutte (souris / pavé tactile uniquement, voir SiteCursor.jsx) */
-.site-cursor{position:fixed;inset:0;z-index:9999;pointer-events:none}
-html.has-blob-cursor,html.has-blob-cursor *{cursor:none!important}
-html.has-blob-cursor input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]),
-html.has-blob-cursor textarea{cursor:text!important} /* garde le curseur texte pour la saisie */
 
 /* Responsive
    ≥1600 grands écrans · ≤1000 tablettes / petits portables · ≤760 téléphones · ≤480 petits téléphones · ≤380 très petits */

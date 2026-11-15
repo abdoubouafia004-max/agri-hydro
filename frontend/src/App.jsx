@@ -12,6 +12,7 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Home />} />
+        {/* /boutique?categorie=<slug> : affiche tous les produits de la catégorie choisie */}
         <Route path="boutique" element={<Boutique />} />
         <Route path="produit/:slug" element={<Product />} />
         <Route path="a-propos" element={<About />} />
